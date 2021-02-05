@@ -14,5 +14,5 @@ c1 = Cat.create({birth_date: '2017/02/05',color: 'orange',name: 'Megan',sex: 'F'
 c2 = Cat.create({birth_date: '2016/02/05',color: 'black',name: 'David',sex: 'M',description: 'TA'})
 
 crr1 = CatRentalRequest.create({cat_id: 1, start_date: '2021/02/07', end_date: '2021/02/11'})
-crr2 = CatRentalRequest.create({cat_id: 1, start_date: '2021/02/11', end_date: '2021/02/13'})
+crr2 = CatRentalRequest.create({cat_id: 1, start_date: '2021/02/11', end_date: '2021/02/13', status: 'APPROVED'})
 crr3 = CatRentalRequest.create({cat_id: 1, start_date: '2021/02/14', end_date: '2021/02/18'})
