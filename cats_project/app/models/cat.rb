@@ -4,6 +4,6 @@ class Cat < ApplicationRecord
 
     has_many :rental_requests,
         foreign_key: :cat_id,
-        class_name: :CatRentalRequests,
+        class_name: :CatRentalRequest,
         dependent: :destroy
 end

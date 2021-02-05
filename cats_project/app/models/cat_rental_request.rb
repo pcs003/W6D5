@@ -5,4 +5,10 @@ class CatRentalRequest < ApplicationRecord
     belongs_to :cat,
         foreign_key: :cat_id,
         class_name: :Cat
+
+    def overlapping_requests
+        CatRentalRequest.where(cat_id: cat_id).where.not("start_date > :end_date OR end_date < :start_date", start_date:start_date, end_date:end_date).where.not(id: self.id)
+    end
+
+    
 end
