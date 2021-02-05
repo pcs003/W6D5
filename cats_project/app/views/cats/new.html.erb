@@ -1,27 +1,3 @@
-<form action="/cats" method="post">
-    <label for="name">Name:</label>
-    <input id="name" type="text" name="cat[name]" value="">
+<h1>Create a cat:</h1>
 
-    <input id="male" type="radio" name="cat[sex]" value="M">
-    <label for="male">Male</label>
-    <input id="female" type="radio" name="cat[sex]" value="F">
-    <label for="female">Female</label>
-
-    <label for="color">Color:</label>
-    <select id="color" name="cat[color]">
-        <option selected disabled>Select Color</option>
-        <% Cat::COLORS.each do |color| %>
-            <option value=<%= color %>><%= color.upcase %></option>
-        <% end %>
-    </select>
-
-    <label for="birth_date">Birth Date:</label>
-    <input id="birth_date" type="date" name="cat[birth_date]" value="">
-
-    <label>Description:
-        <textarea name="cat[description]"></textarea>
-    </label>
-
-    <input type="submit" value="Create">
-    
-</form>
+<%= render "form", cat: @cat, type: :new %>
