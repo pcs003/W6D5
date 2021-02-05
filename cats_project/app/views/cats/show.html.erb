@@ -1,0 +1,31 @@
+<table>
+    <thead>
+        <tr>
+            <th colspan="2"><%= @cat.name %></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>BIRTH DATE</td>
+            <td><%= @cat.birth_date %></td>
+        </tr>
+        <tr>
+            <td>COLOR</td>
+            <td><%= @cat.color.upcase %></td>
+        </tr>
+        <tr>
+            <td>SEX</td>
+            <td><%= @cat.sex %></td>
+        </tr>
+    </tbody>
+</table>
+<!--
+<h1><%= @cat.name %></h1>
+
+<h3>Birth Date: <%= @cat.birth_date %></h3>
+<h3>Color: <%= @cat.color %></h3>
+<h3>Sex: <%= @cat.sex %></h3>
+
+<p><%= @cat.description %></p>
+-->
